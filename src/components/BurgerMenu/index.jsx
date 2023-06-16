@@ -38,7 +38,7 @@ const BurgerMenu = () => {
                 open={open}
                 onClose={() => setOpen(false)}
             >
-                <Box p={4}>
+                <Box p={4} height="calc(100% - 50px)">
                     <Stack
                         flexDirection="row"
                         justifyContent="flex-end"
@@ -51,13 +51,20 @@ const BurgerMenu = () => {
                             <Close />
                         </IconButton>
                     </Stack>
-                    <Stack gap={5} >
-                        <NavLink to="/" title="Əsas səhifə" />
-                        <NavLink to="/about" title="Haqqımızda" />
-                        <NavLink to="/texnikalar" title="Texnikalar" links={texnikalarLinks} />
-                        <NavLink to="/icare" title="İcarə şərtləri" />
-                        <NavLink to="/blog" title="Blog" />
-                        <NavLink to="/elaqe" title="Əlaqə" />
+                    <Stack height="100%" justifyContent="space-between">
+                        <Stack gap={5}>
+                            <NavLink to="/" title="Əsas səhifə" />
+                            <NavLink to="/about" title="Haqqımızda" />
+                            <NavLink to="/texnikalar" title="Texnikalar" links={texnikalarLinks} />
+                            <NavLink to="/icare" title="İcarə şərtləri" />
+                            <NavLink to="/blog" title="Blog" />
+                            <NavLink to="/elaqe" title="Əlaqə" />
+                        </Stack>
+                        <Stack flexDirection="row" justifyContent="center" gap={1}>
+                            <Typography>Az</Typography>
+                            <Typography>En</Typography>
+                            <Typography>Ru</Typography>
+                        </Stack>
                     </Stack>
                 </Box>
             </Dialog>
