@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MegaTexnikaLogo from "../../assets/logo.png"
 import NavLink from "../NavLink";
+import BurgerMenu from "../BurgerMenu";
 
 const texnikalarLinks = [
     {
@@ -36,7 +37,7 @@ const Header = () => {
             <Container sx={{ py: 4 }}>
                 <Stack flexDirection="row" alignItems="center" justifyContent="space-between">
                     <img src={MegaTexnikaLogo} style={{ objectFit: 'contain' }} />
-                    <Stack flexDirection="row" gap={1}>
+                    <Stack sx={{ display: { xs: 'none', md: 'flex' } }} flexDirection="row" gap={1}>
                         <NavLink to="/" title="Əsas səhifə" />
                         <NavLink to="/about" title="Haqqımızda" />
                         <NavLink to="/texnikalar" title="Texnikalar" links={texnikalarLinks} />
@@ -44,11 +45,12 @@ const Header = () => {
                         <NavLink to="/blog" title="Blog" />
                         <NavLink to="/elaqe" title="Əlaqə" />
                     </Stack>
-                    <Stack flexDirection="row" gap={1}>
+                    <Stack sx={{ display: { xs: 'none', md: 'flex' } }} flexDirection="row" gap={1}>
                         <Typography>Az</Typography>
                         <Typography>En</Typography>
                         <Typography>Ru</Typography>
                     </Stack>
+                    <BurgerMenu />
                 </Stack>
 
             </Container>
