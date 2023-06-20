@@ -17,6 +17,7 @@ const theme = createTheme({
                     textTransform: 'capitalize',
                     color: 'black',
                     borderColor: 'black',
+                    minWidth: 150,
                     "&:hover": {
                         backgroundColor: 'rgb(255, 192, 31)'
                     }
