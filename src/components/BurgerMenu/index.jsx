@@ -15,6 +15,11 @@ const texnikalarLinks = [
         to: '/texnikalar/forklift',
         title: 'Forklift'
     },
+    {
+        id: 2,
+        to: '/texnikalar/mehsulun_adı',
+        title: 'Məhsulun Adı'
+    }
 ]
 
 

@@ -4,7 +4,6 @@ function App() {
   return (
     <>
       <Routing />
-      {"salam bu git testingdir"}
     </>
   )
 }
