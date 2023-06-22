@@ -8,6 +8,7 @@ import belas from "../../assets/belas.png"
 import CategoryCard from "../../components/CategoryCard"
 import PaperImg from "../../components/PaperImg"
 import TexnikaCard from "../../components/TexnikaCard"
+import MarkalarCarousel from "../../components/MarkalarCarousel"
 
 const texnikalar = [
     {
@@ -135,6 +136,9 @@ const Home = () => {
                 <Stack alignItems="center" py={4}>
                     <Button>Hamısına bax</Button>
                 </Stack>
+                <Typography my={6} variant="h6" fontWeight="bold">Markalar</Typography>
+                <MarkalarCarousel />
+
             </Container>
         </PageContainer>
     )
