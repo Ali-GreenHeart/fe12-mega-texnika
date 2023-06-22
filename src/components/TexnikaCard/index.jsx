@@ -40,10 +40,7 @@ const TexnikaCard = ({ title, src, year, priceMonth, priceDay }) => {
                 </Typography>
             </Stack>
             <Box px={3} py={2} textAlign="center">
-                <Button
-                    variant="outlined"
-                >İcarə et
-                </Button>
+                <Button fullWidth>İcarə et</Button>
             </Box>
         </Paper>
     )
