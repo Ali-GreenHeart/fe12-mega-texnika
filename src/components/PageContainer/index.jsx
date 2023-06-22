@@ -1,16 +1,16 @@
-import { Box } from "@mui/material"
-import Footer from "../Footer"
-import Header from "../Header"
+import { Box } from "@mui/material";
+import Footer from "../Footer";
+import Header from "../Header";
 
 const PageContainer = ({ children }) => {
-    return (
-        <>
-            <Header />
-                <Box component="main" sx={{ my: 5 }}>
-                    {children}
-                </Box>
-            <Footer />
-        </>
-    )
-}
-export default PageContainer
+  return (
+    <>
+      <Header />
+      <Box component="main" sx={{ my: 5 }}>
+        {children}
+      </Box>
+      <Footer />
+    </>
+  );
+};
+export default PageContainer;
