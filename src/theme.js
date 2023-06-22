@@ -4,12 +4,17 @@ const theme = createTheme({
     palette: {
         primary: {
             main: 'rgb(255, 192, 31)'
+        },
+        secondary: {
+            main: 'rgb(104, 104, 104)',
+            light: "rgb(176, 173, 173)"
         }
     },
     components: {
         MuiButton: {
             defaultProps: {
-                disableRipple: true
+                disableRipple: true,
+                variant: "outlined"
             },
             styleOverrides: {
                 root: {
