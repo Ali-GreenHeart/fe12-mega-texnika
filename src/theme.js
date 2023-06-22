@@ -13,7 +13,8 @@ const theme = createTheme({
     components: {
         MuiButton: {
             defaultProps: {
-                disableRipple: true
+                disableRipple: true,
+                variant: "outlined"
             },
             styleOverrides: {
                 root: {
