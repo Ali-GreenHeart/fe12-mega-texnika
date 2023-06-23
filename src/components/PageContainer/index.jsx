@@ -6,7 +6,7 @@ const PageContainer = ({ children }) => {
     return (
         <>
             <Header />
-            <Box component="main" sx={{ my: 5 }}>
+            <Box className="background_radiuses_texture" component="main" sx={{ my: 5 }}>
                 {children}
             </Box>
             <Footer />

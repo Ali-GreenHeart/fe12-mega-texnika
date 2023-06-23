@@ -56,7 +56,7 @@ const texnikalar = [
 const Home = () => {
     return (
         <PageContainer>
-            <Container className="background_radiuses_texture">
+            <Container>
                 <Grid container alignItems="center" spacing={2}>
                     <Grid item xs={12} md={6}>
                         <Typography variant="h4" fontWeight="bold">Ağır texnikanızı bizdən satın alın</Typography>
