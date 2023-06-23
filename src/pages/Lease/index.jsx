@@ -7,10 +7,10 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { PageContainer } from "../../components/PageContainer";
+import PageContainer from "../../components/PageContainer";
 import surunen from "../../assets/icare/surunen.png";
 import surunen_buludlu from "../../assets/icare/surunen_buludlu.png";
-import { PaperImg } from "../../components/PaperImg";
+import PaperImg from "../../components/PaperImg";
 import AddIcon from "@mui/icons-material/Add";
 
 const icare = [
@@ -105,12 +105,17 @@ export const Lease = () => {
               justifyContent="space-between"
               spacing={5}
             >
-              <Grid item xs={12} md={6} lg={4}>
+              <Grid
+                item
+                sx={{ display: { xs: "none", md: "block" } }}
+                md={6}
+                lg={4}
+              >
                 <Typography
                   variant="h5"
                   color="rgba(89, 108, 114, 1)"
                   fontFamily="Mulish"
-                  fontWeight='700'
+                  fontWeight="700"
                   fontSize="50px"
                   sx={{ transform: "translate(0, -100px)" }}
                 >
@@ -167,7 +172,7 @@ export const Lease = () => {
           <Box gap={2}>
             {questions.map((question) => {
               return (
-                <Accordion>
+                <Accordion key={question.id}>
                   <AccordionSummary expandIcon={<AddIcon color="primary" />}>
                     <Typography>{question.question}</Typography>
                   </AccordionSummary>
