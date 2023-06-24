@@ -1,8 +1,8 @@
-import { Typography, Grid, Container, Paper } from "@mui/material";
-import PageContainer from "../../components/PageContainer";
-import img from "../../assets/img.png"
-import PaperImg from "../../components/PaperImg";
+import { Container, Grid, Typography } from "@mui/material";
 import { useParams } from "react-router";
+import img from "../../assets/img.png";
+import PageContainer from "../../components/PageContainer";
+import PaperImg from "../../components/PaperImg";
 
 
 const Xeber = () => {
