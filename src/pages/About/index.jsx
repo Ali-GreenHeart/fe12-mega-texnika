@@ -24,7 +24,7 @@ export const About = () => {
         <Typography
           variant="h6"
           fontSize="20px"
-          color="rgba(255, 192, 31, 1)"
+          color="primary"
           fontFamily="Mulish"
           fontWeight={500}
           textAlign="center"
@@ -32,19 +32,12 @@ export const About = () => {
         >
           Haqqımızda
         </Typography>
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
           <Typography
-            variant="h6"
-            display="flex"
-            flexDirection="column"
-            color="rgba(53, 53, 53, 1)"
             fontFamily="Mulish"
-            fontSize="20px"
             textAlign="center"
-            alignItems="center"
             pt="30px"
             mb="20px"
-            sx={{ maxWidth: "100%" }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -95,12 +88,10 @@ export const About = () => {
           <Grid item xs={12} md={6}>
             <Typography
               variant="h5"
-              display="flex"
-              flexDirection="column"
               fontSize="50px"
               fontFamily="sans-serif"
               fontWeight={700}
-              color="rgba(89, 108, 114, 1)"
+              color="secondary.main"
             >
               Niyə bizi seçməlisiniz
             </Typography>
