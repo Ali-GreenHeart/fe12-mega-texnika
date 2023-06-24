@@ -12,13 +12,12 @@ export const About = () => {
     <PageContainer>
       <Container>
         <Typography
-          variant="h4"
-          fontSize="80px"
+          variant="h2"
+          sx={{ fontSize: { xs: '2rem', sm: "3rem", md: "4rem" } }}
           fontFamily="sans-serif"
           fontWeight={900}
-          alignItems="center"
           textAlign="center"
-          color="rgba(89, 108, 114, 1)"
+          color="secondary.main"
         >
           megaTexnika
         </Typography>
@@ -33,24 +32,26 @@ export const About = () => {
         >
           Haqqımızda
         </Typography>
-        <Typography
-          variant="h6"
-          display="flex"
-          flexDirection="column"
-          color="rgba(53, 53, 53, 1)"
-          fontFamily="Mulish"
-          fontSize="20px"
-          textAlign="center"
-          alignItems="center"
-          pt="30px"
-          mb="20px"
-          sx={{ maxWidth: "100%" }}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled
-        </Typography>
+        <Container maxWidth="md">
+          <Typography
+            variant="h6"
+            display="flex"
+            flexDirection="column"
+            color="rgba(53, 53, 53, 1)"
+            fontFamily="Mulish"
+            fontSize="20px"
+            textAlign="center"
+            alignItems="center"
+            pt="30px"
+            mb="20px"
+            sx={{ maxWidth: "100%" }}
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled
+          </Typography>
+        </Container>
         <PaperImg src={about1} />
         <Grid
           mt={10}
