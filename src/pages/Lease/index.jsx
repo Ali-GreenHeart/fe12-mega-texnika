@@ -13,19 +13,6 @@ import surunen_buludlu from "../../assets/icare/surunen_buludlu.png";
 import PaperImg from "../../components/PaperImg";
 import AddIcon from "@mui/icons-material/Add";
 
-const icare = [
-  {
-    id: 0,
-    title: "surunen",
-    img: surunen,
-  },
-  {
-    id: 1,
-    title: "surunen_buludlu",
-    img: surunen_buludlu,
-  },
-];
-
 const questions = [
   {
     id: 0,
@@ -107,7 +94,6 @@ export const Lease = () => {
             >
               <Grid
                 item
-                sx={{ display: { xs: "none", md: "block" } }}
                 md={6}
                 lg={4}
               >
@@ -117,20 +103,18 @@ export const Lease = () => {
                   fontFamily="Mulish"
                   fontWeight="700"
                   fontSize="50px"
-                  sx={{ transform: "translate(0, -100px)" }}
                 >
                   İcarə şərtləri
                 </Typography>
-                <PaperImg src={surunen_buludlu} />
+                <Box sx={{ display: { xs: "none", md: "block" } }}>
+                  <PaperImg src={surunen_buludlu} />
+                </Box>
               </Grid>
               <Grid item xs={12} md={6} lg={8}>
                 <PaperImg src={surunen} />
                 <Typography
                   my={2}
-                  alignItems="center"
-                  justifyContent="space-evenly"
                   mt="50px"
-                  color="rgba(53, 53, 53, 1)"
                 >
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
