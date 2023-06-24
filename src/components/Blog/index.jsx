@@ -88,7 +88,7 @@ const Blog = () => {
         <Grid container spacing={2} justifyContent="center" py={2} my={4}>
           {
             news.map(({ id, title, img, date }) => {
-              return <Grid key={id} item xs={12} sm={6} md={4} lg={3}>
+              return <Grid component="a" href={`/blog/${id}`} key={id} item xs={12} sm={6} md={4} lg={3}>
                 <BlogCard
                   title={title}
                   src={img}
