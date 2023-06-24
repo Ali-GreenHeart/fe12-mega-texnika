@@ -170,7 +170,7 @@ const Home = () => {
           <Button>Hamısına bax</Button>
         </Stack>
         <Typography my={6} variant="h6" fontWeight="bold">
-          Markalar
+          MARKALAR
         </Typography>
         <MarkalarCarousel />
       </Container>
