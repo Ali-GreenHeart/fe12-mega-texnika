@@ -15,7 +15,7 @@ const TexnikaCard = ({ title, src, year, priceMonth, priceDay }) => {
                     component="h3"
                     fontWeight="600"
                     fontSize="18px"
-                > Məhsulun adı
+                > Məhsulun Adi
                 </Typography>
                 <Typography
                     color="secondary"
