@@ -12,10 +12,8 @@ const CategoryCard = ({ title, src }) => {
                 justifyContent: 'space-between',
                 p: 2
             }}>
-                  <img style={{ width: '99%', objectFit: 'contain' }} src={src} />
-            <Typography pt={2} component="h4" fontWeight="bold" textAlign="center">{title}</Typography>
-            <Typography textAlign="center">20.12.2023</Typography>
-          
+            <Typography pt={4} component="h4" fontWeight="bold" textAlign="center">{title}</Typography>
+            <img style={{ width: '100%', objectFit: 'contain' }} src={src} />
         </Paper>
     )
 }

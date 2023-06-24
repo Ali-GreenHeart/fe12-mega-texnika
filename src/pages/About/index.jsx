@@ -12,20 +12,19 @@ export const About = () => {
     <PageContainer>
       <Container>
         <Typography
-          variant="h4"
-          fontSize="80px"
+          variant="h2"
+          sx={{ fontSize: { xs: '2rem', sm: "3rem", md: "4rem" } }}
           fontFamily="sans-serif"
           fontWeight={900}
-          alignItems="center"
           textAlign="center"
-          color="rgba(89, 108, 114, 1)"
+          color="secondary.main"
         >
           megaTexnika
         </Typography>
         <Typography
           variant="h6"
           fontSize="20px"
-          color="rgba(255, 192, 31, 1)"
+          color="primary"
           fontFamily="Mulish"
           fontWeight={500}
           textAlign="center"
@@ -33,24 +32,19 @@ export const About = () => {
         >
           Haqqımızda
         </Typography>
-        <Typography
-          variant="h6"
-          display="flex"
-          flexDirection="column"
-          color="rgba(53, 53, 53, 1)"
-          fontFamily="Mulish"
-          fontSize="20px"
-          textAlign="center"
-          alignItems="center"
-          pt="30px"
-          mb="20px"
-          sx={{ maxWidth: "100%" }}
-        >
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled
-        </Typography>
+        <Container maxWidth="sm">
+          <Typography
+            fontFamily="Mulish"
+            textAlign="center"
+            pt="30px"
+            mb="20px"
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled
+          </Typography>
+        </Container>
         <PaperImg src={about1} />
         <Grid
           mt={10}
@@ -94,12 +88,10 @@ export const About = () => {
           <Grid item xs={12} md={6}>
             <Typography
               variant="h5"
-              display="flex"
-              flexDirection="column"
               fontSize="50px"
               fontFamily="sans-serif"
               fontWeight={700}
-              color="rgba(89, 108, 114, 1)"
+              color="secondary.main"
             >
               Niyə bizi seçməlisiniz
             </Typography>
