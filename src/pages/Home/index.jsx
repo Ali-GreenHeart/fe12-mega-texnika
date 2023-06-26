@@ -17,7 +17,11 @@ import CategoryCard from "../../components/CategoryCard";
 import PaperImg from "../../components/PaperImg";
 import TexnikaCard from "../../components/TexnikaCard";
 import MarkalarCarousel from "../../components/MarkalarCarousel";
-
+import y1 from "../../assets/Home_Yenilikler/y1.png";
+import y2 from "../../assets/Home_Yenilikler/y2.png";
+import y3 from "../../assets/Home_Yenilikler/y3.png";
+import y4 from "../../assets/Home_Yenilikler/y4.png";
+import NewsCard from "../../components/NewsCard/index";
 const texnikalar = [
   {
     id: 0,
@@ -58,6 +62,36 @@ const texnikalar = [
     id: 7,
     title: "Traktorlar",
     img: ekskavator_yukleyici,
+  },
+];
+const News = [
+  {
+    id: 1,
+    title: "Lorem Ipsum is simply dummy",
+    img: y1,
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    date: "01.04.2022",
+  },
+  {
+    id: 2,
+    title: "Lorem Ipsum has been the industry's standard dummy text ever since",
+    img: y2,
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    date: "01.04.2022",
+  },
+  {
+    id: 3,
+    title: "Lorem Ipsum is simply dummy",
+    img: y3,
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    date: "01.04.2022",
+  },
+  {
+    id: y4,
+    title: "Lorem Ipsum is simply dummy",
+    img: y4,
+    text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
+    date: "01.04.2022",
   },
 ];
 
@@ -173,6 +207,32 @@ const Home = () => {
           Markalar
         </Typography>
         <MarkalarCarousel />
+        <Typography
+          variant="h4"
+          color="secondary"
+          fontSize="30px"
+          fontFamily="Montserrat"
+          fontWeight="600"
+          my={1}
+          py={5}
+        >
+          Yeniliklər
+        </Typography>
+        <Grid container spacing={4} >
+          <Grid item maxWidth="100%" display="flex" flexDirection="row" my={6}>
+            {News.map((item) => {
+              return (
+                <NewsCard
+                  key={item.id}
+                  title={item.title}
+                  src={item.img}
+                  text={item.text}
+                  date={item.date}
+                />
+              );
+            })}
+          </Grid>
+        </Grid>
       </Container>
     </PageContainer>
   );
