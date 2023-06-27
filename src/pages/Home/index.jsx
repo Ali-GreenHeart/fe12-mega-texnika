@@ -84,10 +84,10 @@ const News = [
     title: "Lorem Ipsum is simply dummy",
     img: y3,
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-    date: "01.04.2022",
+    date: "01.04.2022"
   },
   {
-    id: y4,
+    id: 4,
     title: "Lorem Ipsum is simply dummy",
     img: y4,
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
@@ -218,20 +218,25 @@ const Home = () => {
         >
           Yeniliklər
         </Typography>
-        <Grid container spacing={4} >
-          <Grid item maxWidth="100%" display="flex" flexDirection="row" my={6}>
-            {News.map((item) => {
-              return (
+        <Grid container spacing={2}>
+          {News.map((item) => {
+            return (
+              <Grid
+                key={item.id}
+                item
+                xs={12}
+                sm={6}
+                md={3}
+              >
                 <NewsCard
-                  key={item.id}
                   title={item.title}
                   src={item.img}
                   text={item.text}
                   date={item.date}
                 />
-              );
-            })}
-          </Grid>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
     </PageContainer>
