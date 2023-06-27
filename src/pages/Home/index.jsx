@@ -5,6 +5,7 @@ import {
   Grid,
   Paper,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
@@ -22,6 +23,9 @@ import y2 from "../../assets/Home_Yenilikler/y2.png";
 import y3 from "../../assets/Home_Yenilikler/y3.png";
 import y4 from "../../assets/Home_Yenilikler/y4.png";
 import NewsCard from "../../components/NewsCard/index";
+import img1 from "../../assets/elaqe/img1.png";
+import { BorderAll } from "@mui/icons-material";
+
 const texnikalar = [
   {
     id: 0,
@@ -208,12 +212,13 @@ const Home = () => {
         </Typography>
         <MarkalarCarousel />
         <Typography
-          variant="h4"
+          variant="h6"
           color="secondary"
           fontSize="30px"
           fontFamily="Montserrat"
           fontWeight="600"
           my={1}
+          mb={5}
           py={5}
         >
           Yeniliklər
@@ -239,6 +244,67 @@ const Home = () => {
           })}
         </Grid>
       </Container>
+      <Box sx={{ backgroundColor: "secondary.light" }}>
+        <Container>
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <Typography
+                variant="h5"
+                color="secondary"
+                fontFamily="Montserrat"
+                fontSize="30px"
+                fontWeight="700"
+                my={3}
+                mx={2}
+              >
+                Bizimlə əlaqə saxla!
+              </Typography>
+              <Typography
+                variant="h6"
+                fontFamily="Mulish"
+                fontSize="14px"
+                maxWidth="450px"
+                mx={2}
+              >
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled
+              </Typography>
+              <Grid item my={3}>
+                <TextField
+                  variant="outlined"
+                  size="small"
+                  label="Ad, Soyad"
+                ></TextField>
+                <TextField
+                  variant="outlined"
+                  size="small"
+                  label="Şirkətin adı"
+                ></TextField>
+                <TextField
+                  variant="outlined"
+                  size="small"
+                  label="E-mail"
+                ></TextField>
+                <TextField
+                  variant="outlined"
+                  size="small"
+                  label="Telefon"
+                ></TextField>
+              </Grid>
+              <Grid item my={3}>
+                <Button fullWidth sx={{ backgroundColor: "secondary" }}>
+                  Göndər
+                </Button>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={6} mt="-100px">
+              <img src={img1} alt="Traktor" />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </PageContainer>
   );
 };
