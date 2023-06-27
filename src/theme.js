@@ -7,10 +7,25 @@ const theme = createTheme({
         },
         secondary: {
             main: 'rgb(104, 104, 104)',
-            light: "rgb(176, 173, 173)"
+            light: "rgb(176, 173, 173)",
+            white: 'rgb(239, 239, 239)'
         }
     },
     components: {
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    borderRadius: 20
+                }
+            }
+        },
+        MuiTextField: {
+            defaultProps: {
+                fullWidth: true,
+                variant: 'outlined',
+                size: 'small'
+            }
+        },
         MuiButton: {
             defaultProps: {
                 disableRipple: true,

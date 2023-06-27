@@ -244,7 +244,7 @@ const Home = () => {
           })}
         </Grid>
       </Container>
-      <Box sx={{ backgroundColor: "secondary.light" }}>
+      <Box sx={{ backgroundColor: "secondary.white" }} py={4} mt={10}>
         <Container>
           <Grid container>
             <Grid item xs={12} md={6}>
@@ -254,8 +254,7 @@ const Home = () => {
                 fontFamily="Montserrat"
                 fontSize="30px"
                 fontWeight="700"
-                my={3}
-                mx={2}
+                my={2}
               >
                 Bizimlə əlaqə saxla!
               </Typography>
@@ -263,43 +262,49 @@ const Home = () => {
                 variant="h6"
                 fontFamily="Mulish"
                 fontSize="14px"
-                maxWidth="450px"
-                mx={2}
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled
               </Typography>
-              <Grid item my={3}>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Ad, Soyad"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Şirkətin adı"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="E-mail"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Telefon"
-                ></TextField>
+              <Grid my={2} container spacing={1}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="fullName"
+                    label="Ad, Soyad"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="companyName"
+                    label="Şirkətin adı"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="eMail"
+                    label="E-mail"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="phone"
+                    label="Telefon"
+                  />
+                </Grid>
               </Grid>
-              <Grid item my={3}>
-                <Button fullWidth sx={{ backgroundColor: "secondary" }}>
-                  Göndər
-                </Button>
-              </Grid>
+              <Button fullWidth>Göndər</Button>
             </Grid>
-            <Grid item xs={12} md={6} mt="-100px">
+            <Grid item xs={12} md={6}
+              sx={{
+                '& > img': {
+                  display: { xs: 'none', md: 'inline' },
+                  mt: { md: '-100px', lg: "-140px" },
+                  width: '100%'
+                }
+              }}
+            >
               <img src={img1} alt="Traktor" />
             </Grid>
           </Grid>
