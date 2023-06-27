@@ -19,3 +19,6 @@ a {
     z-index: -1;
     background-image: url("assets/radiuses.png");
 }
+.btn Button{
+   min-width: 110px;
+}
