@@ -6,6 +6,7 @@ import about1 from "../../assets/about/about1.png";
 import forklift from "../../assets/forklift.png";
 import belas from "../../assets/belas.png";
 import WhyChooseUs from "../../components/WhyChooseUs";
+import AboutTexnikaSection from "../../components/AboutTexnikaSection";
 
 export const About = () => {
   return (
@@ -46,36 +47,8 @@ export const About = () => {
           </Typography>
         </Container>
         <PaperImg src={about1} />
-        <Grid
-          mt={10}
-          pb={4}
-          container
-          alignItems="flex-end"
-          justifyContent="space-between"
-        >
-          <Grid
-            item
-            md={4}
-            lg={3}
-            sx={{ display: { xs: "none", md: "block" } }}
-          >
-            <PaperImg src={forklift} />
-          </Grid>
-          <Grid item xs={12} md={7} lg={8}>
-            <PaperImg src={belas} />
-            <Box pl={5} pt={5}>
-              <Typography variant="h4" fontWeight="bold">
-                Mega Texnika-da sınaqdan keçirilmiş texnikalar
-              </Typography>
-              <Typography my={2}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
+        <AboutTexnikaSection
+          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum" />
         <WhyChooseUs />
       </Container>
     </PageContainer>

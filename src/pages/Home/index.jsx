@@ -11,12 +11,10 @@ import y1 from "../../assets/Home_Yenilikler/y1.png";
 import y2 from "../../assets/Home_Yenilikler/y2.png";
 import y3 from "../../assets/Home_Yenilikler/y3.png";
 import y4 from "../../assets/Home_Yenilikler/y4.png";
-import belas from "../../assets/belas.png";
 import ekskavator from "../../assets/ekskavator_1.png";
 import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
 import img1 from "../../assets/elaqe/img1.png";
 import eskavator from "../../assets/eskavator.png";
-import forklift from "../../assets/forklift.png";
 import CategoryCard from "../../components/CategoryCard";
 import MarkalarCarousel from "../../components/MarkalarCarousel";
 import NewsCard from "../../components/NewsCard/index";
@@ -24,6 +22,7 @@ import PageContainer from "../../components/PageContainer";
 import PaperImg from "../../components/PaperImg";
 import TexnikaCard from "../../components/TexnikaCard";
 import WhyChooseUs from "../../components/WhyChooseUs";
+import AboutTexnikaSection from "../../components/AboutTexnikaSection";
 
 const texnikalar = [
   {
@@ -122,7 +121,7 @@ const Home = () => {
         <Typography my={2} variant="h6" fontWeight="bold">
           Kateqoriyalar
         </Typography>
-        <Grid my={2} container spacing={2} justifyContent="center">
+        <Grid my={2} mb={5} container spacing={2} justifyContent="center">
           {texnikalar.map((texnika) => {
             return (
               <Grid key={texnika.id} item xs={12} sm={6} md={4} lg={3}>
@@ -131,36 +130,10 @@ const Home = () => {
             );
           })}
         </Grid>
-        <Grid
-          pb={4}
-          container
-          alignItems="flex-end"
-          justifyContent="space-between"
-        >
-          <Grid
-            item
-            md={4}
-            lg={3}
-            sx={{ display: { xs: "none", md: "block" } }}
-          >
-            <PaperImg src={forklift} />
-          </Grid>
-          <Grid item xs={12} md={7} lg={8}>
-            <PaperImg src={belas} />
-            <Box pl={5} pt={5}>
-              <Typography variant="h4" fontWeight="bold">
-                Mega Texnika-da sınaqdan keçirilmiş texnikalar
-              </Typography>
-              <Typography my={2}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled
-              </Typography>
-              <Button>Haqqımızda</Button>
-            </Box>
-          </Grid>
-        </Grid>
+        <AboutTexnikaSection
+          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled"
+          withButton
+        />
 
         <Typography my={6} variant="h6" fontWeight="bold">
           Texnikalar
