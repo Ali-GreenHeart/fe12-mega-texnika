@@ -7,31 +7,27 @@ const TexnikalarMenu = () => {
   const [anchorElm, setAnchorElm] = useState(null);
   return (
     <Box
-      sx={{ display: { xs: 'block', md: 'block', lg: "none" } }}>
+      sx={{ display: { xs: 'block', lg: "none" } }}>
       <IconButton onClick={(e) => {
         setOpen(!open)
         setAnchorElm(e.target)
       }}>
         <MenuIcon />
-        <Typography
-          component="h2"
-          fontWeight="700"
-          textAlign="center"
-          fontSize="24px"
-          color="secondary"
-        >Texnikalar
-        </Typography>
       </IconButton>
+      <Typography
+        component="h2"
+        fontWeight="700"
+        textAlign="center"
+        fontSize="24px"
+        color="secondary"
+      >Texnikalar
+      </Typography>
       <Menu
         anchorEl={anchorElm}
         open={open}
         onClose={() => setOpen(false)}
       >
-        <IconButton
-          onClick={() => setOpen(false)}
-        >
-        </IconButton>
-        <Stack sx={{ width: "250px" ,gap:"6px" }} >
+        <Stack sx={{ width: 250, gap: "6px" }} >
           <Button variant='text'>Hamısı</Button>
           <Button variant='text'>Ekskavator</Button>
           <Button variant='text'>Ekskavator yükləyici</Button>
