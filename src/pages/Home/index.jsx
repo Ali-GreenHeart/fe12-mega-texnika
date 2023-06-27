@@ -3,28 +3,26 @@ import {
   Button,
   Container,
   Grid,
-  Paper,
   Stack,
   TextField,
-  Typography,
+  Typography
 } from "@mui/material";
-import PageContainer from "../../components/PageContainer";
-import ekskavator from "../../assets/ekskavator_1.png";
-import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
-import eskavator from "../../assets/eskavator.png";
-import forklift from "../../assets/forklift.png";
-import belas from "../../assets/belas.png";
-import CategoryCard from "../../components/CategoryCard";
-import PaperImg from "../../components/PaperImg";
-import TexnikaCard from "../../components/TexnikaCard";
-import MarkalarCarousel from "../../components/MarkalarCarousel";
 import y1 from "../../assets/Home_Yenilikler/y1.png";
 import y2 from "../../assets/Home_Yenilikler/y2.png";
 import y3 from "../../assets/Home_Yenilikler/y3.png";
 import y4 from "../../assets/Home_Yenilikler/y4.png";
-import NewsCard from "../../components/NewsCard/index";
+import ekskavator from "../../assets/ekskavator_1.png";
+import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
 import img1 from "../../assets/elaqe/img1.png";
-import { BorderAll } from "@mui/icons-material";
+import eskavator from "../../assets/eskavator.png";
+import CategoryCard from "../../components/CategoryCard";
+import MarkalarCarousel from "../../components/MarkalarCarousel";
+import NewsCard from "../../components/NewsCard/index";
+import PageContainer from "../../components/PageContainer";
+import PaperImg from "../../components/PaperImg";
+import TexnikaCard from "../../components/TexnikaCard";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import AboutTexnikaSection from "../../components/AboutTexnikaSection";
 
 const texnikalar = [
   {
@@ -88,10 +86,10 @@ const News = [
     title: "Lorem Ipsum is simply dummy",
     img: y3,
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
-    date: "01.04.2022",
+    date: "01.04.2022"
   },
   {
-    id: y4,
+    id: 4,
     title: "Lorem Ipsum is simply dummy",
     img: y4,
     text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry...",
@@ -123,7 +121,7 @@ const Home = () => {
         <Typography my={2} variant="h6" fontWeight="bold">
           Kateqoriyalar
         </Typography>
-        <Grid my={2} container spacing={2} justifyContent="center">
+        <Grid my={2} mb={5} container spacing={2} justifyContent="center">
           {texnikalar.map((texnika) => {
             return (
               <Grid key={texnika.id} item xs={12} sm={6} md={4} lg={3}>
@@ -132,36 +130,10 @@ const Home = () => {
             );
           })}
         </Grid>
-        <Grid
-          pb={4}
-          container
-          alignItems="flex-end"
-          justifyContent="space-between"
-        >
-          <Grid
-            item
-            md={4}
-            lg={3}
-            sx={{ display: { xs: "none", md: "block" } }}
-          >
-            <PaperImg src={forklift} />
-          </Grid>
-          <Grid item xs={12} md={7} lg={8}>
-            <PaperImg src={belas} />
-            <Box pl={5} pt={5}>
-              <Typography variant="h4" fontWeight="bold">
-                Mega Texnika-da sınaqdan keçirilmiş texnikalar
-              </Typography>
-              <Typography my={2}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled
-              </Typography>
-              <Button>Haqqımızda</Button>
-            </Box>
-          </Grid>
-        </Grid>
+        <AboutTexnikaSection
+          text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled"
+          withButton
+        />
 
         <Typography my={6} variant="h6" fontWeight="bold">
           Texnikalar
@@ -223,23 +195,28 @@ const Home = () => {
         >
           Yeniliklər
         </Typography>
-        <Grid container spacing={4}>
-          <Grid item maxWidth="100%" display="flex" flexDirection="row" my={6}>
-            {News.map((item) => {
-              return (
+        <Grid container spacing={2}>
+          {News.map((item) => {
+            return (
+              <Grid
+                key={item.id}
+                item
+                xs={12}
+                sm={6}
+                md={3}
+              >
                 <NewsCard
-                  key={item.id}
                   title={item.title}
                   src={item.img}
                   text={item.text}
                   date={item.date}
                 />
-              );
-            })}
-          </Grid>
+              </Grid>
+            );
+          })}
         </Grid>
       </Container>
-      <Box sx={{ backgroundColor: "secondary.light" }}>
+      <Box sx={{ backgroundColor: "secondary.white" }} py={4} mt={10}>
         <Container>
           <Grid container>
             <Grid item xs={12} md={6}>
@@ -249,8 +226,7 @@ const Home = () => {
                 fontFamily="Montserrat"
                 fontSize="30px"
                 fontWeight="700"
-                my={3}
-                mx={2}
+                my={2}
               >
                 Bizimlə əlaqə saxla!
               </Typography>
@@ -258,48 +234,57 @@ const Home = () => {
                 variant="h6"
                 fontFamily="Mulish"
                 fontSize="14px"
-                maxWidth="450px"
-                mx={2}
               >
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled
               </Typography>
-              <Grid item my={3}>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Ad, Soyad"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Şirkətin adı"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="E-mail"
-                ></TextField>
-                <TextField
-                  variant="outlined"
-                  size="small"
-                  label="Telefon"
-                ></TextField>
+              <Grid my={2} container spacing={1}>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="fullName"
+                    label="Ad, Soyad"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="companyName"
+                    label="Şirkətin adı"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="eMail"
+                    label="E-mail"
+                  />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField
+                    name="phone"
+                    label="Telefon"
+                  />
+                </Grid>
               </Grid>
-              <Grid item my={3}>
-                <Button fullWidth sx={{ backgroundColor: "secondary" }}>
-                  Göndər
-                </Button>
-              </Grid>
+              <Button fullWidth>Göndər</Button>
             </Grid>
-            <Grid item xs={12} md={6} mt="-100px">
+            <Grid item xs={12} md={6}
+              sx={{
+                '& > img': {
+                  display: { xs: 'none', md: 'inline' },
+                  mt: { md: '-100px', lg: "-140px" },
+                  width: '100%'
+                }
+              }}
+            >
               <img src={img1} alt="Traktor" />
             </Grid>
           </Grid>
         </Container>
       </Box>
+      <Container>
+        <WhyChooseUs />
+      </Container>
     </PageContainer>
   );
 };
