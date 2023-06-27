@@ -3,28 +3,27 @@ import {
   Button,
   Container,
   Grid,
-  Paper,
   Stack,
   TextField,
-  Typography,
+  Typography
 } from "@mui/material";
-import PageContainer from "../../components/PageContainer";
-import ekskavator from "../../assets/ekskavator_1.png";
-import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
-import eskavator from "../../assets/eskavator.png";
-import forklift from "../../assets/forklift.png";
-import belas from "../../assets/belas.png";
-import CategoryCard from "../../components/CategoryCard";
-import PaperImg from "../../components/PaperImg";
-import TexnikaCard from "../../components/TexnikaCard";
-import MarkalarCarousel from "../../components/MarkalarCarousel";
 import y1 from "../../assets/Home_Yenilikler/y1.png";
 import y2 from "../../assets/Home_Yenilikler/y2.png";
 import y3 from "../../assets/Home_Yenilikler/y3.png";
 import y4 from "../../assets/Home_Yenilikler/y4.png";
-import NewsCard from "../../components/NewsCard/index";
+import belas from "../../assets/belas.png";
+import ekskavator from "../../assets/ekskavator_1.png";
+import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
 import img1 from "../../assets/elaqe/img1.png";
-import { BorderAll } from "@mui/icons-material";
+import eskavator from "../../assets/eskavator.png";
+import forklift from "../../assets/forklift.png";
+import CategoryCard from "../../components/CategoryCard";
+import MarkalarCarousel from "../../components/MarkalarCarousel";
+import NewsCard from "../../components/NewsCard/index";
+import PageContainer from "../../components/PageContainer";
+import PaperImg from "../../components/PaperImg";
+import TexnikaCard from "../../components/TexnikaCard";
+import WhyChooseUs from "../../components/WhyChooseUs";
 
 const texnikalar = [
   {
@@ -310,6 +309,9 @@ const Home = () => {
           </Grid>
         </Container>
       </Box>
+      <Container>
+        <WhyChooseUs />
+      </Container>
     </PageContainer>
   );
 };

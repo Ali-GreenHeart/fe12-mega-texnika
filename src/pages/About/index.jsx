@@ -5,7 +5,7 @@ import PaperImg from "../../components/PaperImg";
 import about1 from "../../assets/about/about1.png";
 import forklift from "../../assets/forklift.png";
 import belas from "../../assets/belas.png";
-import about2 from "../../assets/about/about2.png";
+import WhyChooseUs from "../../components/WhyChooseUs";
 
 export const About = () => {
   return (
@@ -76,41 +76,7 @@ export const About = () => {
             </Box>
           </Grid>
         </Grid>
-
-        <Grid
-          mt={10}
-          pb={4}
-          container
-          alignItems="flex-start"
-          justifyContent="space-between"
-          spacing={3}
-        >
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h5"
-              fontSize="50px"
-              fontFamily="sans-serif"
-              fontWeight={700}
-              color="secondary.main"
-            >
-              Niyə bizi seçməlisiniz
-            </Typography>
-            <Typography>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled It is a long established fact that a reader
-              will be distracted by the readable content of a page when looking
-              at its layout. The point of using Lorem Ipsum is that it has a
-              more-or-less normal distribution of letters, as opposed to using
-              'Content here, content here', making it look like readable English
-            </Typography>
-          </Grid>
-
-          <Grid item xs={12} md={6}>
-            <PaperImg src={about2} />
-          </Grid>
-        </Grid>
+        <WhyChooseUs />
       </Container>
     </PageContainer>
   );
