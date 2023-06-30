@@ -100,19 +100,11 @@ const Texnikalar = () => {
                     flexDirection="row"
                     sx={{
                         minHeight: "35px",
-<<<<<<< HEAD
-                        textAlign: 'center',
-                        width:"1330px"
-                    }}
-                    border="1px solid"
-                    borderRadius="50px"
-=======
                         textAlign: "center",
-                        display: { xs: "none", md: "none", lg: "block" }
+                        display: { xs: "none", lg: "block" }
                     }}
                     border="1px solid"
                     borderRadius="20px"
->>>>>>> 928b68c6f61437b8fc9a06bc973ba033cd6bae5d
                 >
                     <Button variant="text">Hamısı</Button>
                     <Button variant="text">Ekskavator</Button>
@@ -123,7 +115,7 @@ const Texnikalar = () => {
                     <Button variant="text">Eskavator yükləyici</Button>
                     <Button variant="text">Forkliftlər</Button>
                     <Button variant="text">Avtokran</Button>
-                  
+
                 </Stack>
                 <Grid container position={"relative"}
                     my={2}
