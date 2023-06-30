@@ -4,6 +4,7 @@ import Traktor from "../../assets/traktor.png";
 import news1 from "../../assets/news1.png"
 import news2 from "../../assets/news2.png"
 import news3 from "../../assets/news3.png"
+import CategoryCard from "../CategoryCard";
 import PaperImg from "../PaperImg";
 import BlogCard from "../BlogCard";
 

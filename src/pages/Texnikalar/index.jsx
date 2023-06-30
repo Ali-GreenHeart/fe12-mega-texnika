@@ -115,7 +115,6 @@ const Texnikalar = () => {
                     <Button variant="text">Eskavator yükləyici</Button>
                     <Button variant="text">Forkliftlər</Button>
                     <Button variant="text">Avtokran</Button>
-
                 </Stack>
                 <Grid container position={"relative"}
                     my={2}
