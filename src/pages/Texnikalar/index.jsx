@@ -1,6 +1,7 @@
-import { Container, Grid, Typography, Button, Box, Stack } from "@mui/material";
+import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import TexnikaCard from "../../components/TexnikaCard";
+import TexnikalarMenu from "./texnikalarMenu";
 
 const texnikalar = [
     {
@@ -76,32 +77,42 @@ const texnikalar = [
 const Texnikalar = () => {
     return (<>
         <PageContainer>
-            <Container>
+            <Container >
                 <Typography
                     mb={6}
                     fontSize="12px"
                     color="secondary.light"
                 >Ana səhifə | <b>Texnikalar</b>
                 </Typography>
+
                 <Typography
                     component="h2"
                     my={3}
                     textAlign="center"
-                    fontWeight="700"
-                    fontSize="30px"
+                    fontWeight="700" fontSize="30px"
                     color="secondary"
+                    sx={{ display: { xs: "none", md: "none", lg: "block" } }}
                 >Texnikalar
                 </Typography>
+                <TexnikalarMenu />
                 <Stack
-                    flexDirection="row"
                     className="btn"
+                    flexDirection="row"
                     sx={{
                         minHeight: "35px",
+<<<<<<< HEAD
                         textAlign: 'center',
                         width:"1330px"
                     }}
                     border="1px solid"
                     borderRadius="50px"
+=======
+                        textAlign: "center",
+                        display: { xs: "none", md: "none", lg: "block" }
+                    }}
+                    border="1px solid"
+                    borderRadius="20px"
+>>>>>>> 928b68c6f61437b8fc9a06bc973ba033cd6bae5d
                 >
                     <Button variant="text">Hamısı</Button>
                     <Button variant="text">Ekskavator</Button>
@@ -114,7 +125,7 @@ const Texnikalar = () => {
                     <Button variant="text">Avtokran</Button>
                   
                 </Stack>
-                <Grid container
+                <Grid container position={"relative"}
                     my={2}
                     spacing={2}
                     justifyContent="center"
@@ -123,7 +134,8 @@ const Texnikalar = () => {
                         texnikalar.map(({ id, img, title, year, priceMonth, priceDay }) => {
                             return <Grid
                                 key={id}
-                                item xs={12} sm={6} md={4} lg={3}>
+                                item xs={12} sm={6} md={3} lg={3}>
+
                                 <TexnikaCard
                                     title={title}
                                     src={"/texnikalar_img/" + img}

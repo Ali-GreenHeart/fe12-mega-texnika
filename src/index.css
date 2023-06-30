@@ -19,5 +19,11 @@ a {
     z-index: -1;
     background-image: url("assets/Vector.png");
 }
+<<<<<<< HEAD
 
 
+=======
+.btn Button{
+   min-width: 110px;
+}
+>>>>>>> 928b68c6f61437b8fc9a06bc973ba033cd6bae5d
