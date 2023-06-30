@@ -98,9 +98,10 @@ const Texnikalar = () => {
                     sx={{
                         minHeight: "35px",
                         textAlign: 'center',
+                        width:"1330px"
                     }}
                     border="1px solid"
-                    borderRadius="40px"
+                    borderRadius="50px"
                 >
                     <Button variant="text">Hamısı</Button>
                     <Button variant="text">Ekskavator</Button>
@@ -111,6 +112,7 @@ const Texnikalar = () => {
                     <Button variant="text">Eskavator yükləyici</Button>
                     <Button variant="text">Forkliftlər</Button>
                     <Button variant="text">Avtokran</Button>
+                  
                 </Stack>
                 <Grid container
                     my={2}
