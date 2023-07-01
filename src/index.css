@@ -38,5 +38,35 @@ a {
 }
 
 .btn Button {
-    min-width: 110px;
+  min-width: 110px;
+}
+
+.lease_loading_on_modal {
+  height: 4px;
+  border-radius: 4px;
+  position: relative;
+  top: 80px;
+  background-color: rgb(198, 195, 195);
+  overflow: hidden;
+}
+
+.lease_loading_on_modal::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  background-color: rgb(255, 192, 31);
+  animation: sliding_lease_modal infinite 1600ms linear;
+}
+
+@keyframes sliding_lease_modal {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
 }

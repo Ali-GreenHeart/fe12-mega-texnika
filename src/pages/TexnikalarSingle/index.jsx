@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Paper, Stack, Typography } from "@mui/material"
+import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Dialog, Grid, Paper, Stack, Typography } from "@mui/material"
 import PageContainer from "../../components/PageContainer"
 import ekskavator from "../../assets/ekskavator_1.png"
 import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png"
@@ -6,6 +6,7 @@ import eskavator from "../../assets/eskavator.png"
 import forklift from "../../assets/forklift.png"
 import belas from "../../assets/belas.png"
 import { useState } from 'react'
+import LeaseModal from "../../components/LeaseModal"
 
 let imgList = [ekskavator, ekskavator_yukleyici, eskavator, forklift, belas]
 
@@ -81,7 +82,7 @@ const TexnikalarSingle = () => {
                                 </Stack>
                             </CardContent>
                             <CardActions>
-                                <Button fullWidth> Günlük icarə et</Button>
+                                <LeaseModal />
                             </CardActions>
                         </Card>
                     </Grid>
