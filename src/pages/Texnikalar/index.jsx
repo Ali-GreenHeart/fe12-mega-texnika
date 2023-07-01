@@ -128,6 +128,7 @@ const Texnikalar = () => {
                 item xs={12} sm={6} md={3} lg={3}>
 
                 <TexnikaCard
+                  id={id}
                   title={title}
                   src={"/texnikalar_img/" + img}
                   year={year}

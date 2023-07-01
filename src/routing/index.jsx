@@ -6,6 +6,7 @@ import { About } from "../pages/About"
 import Xeber from "../pages/Xeber"
 import Texnikalar from "../pages/Texnikalar"
 import Homeali from "../pages/NEwhome"
+import TexnikalarSingle from "../pages/TexnikalarSingle"
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
       <Route path="/" element={<Home />} />
       <Route path="/newhome" element={<Homeali />} />
       <Route path="/texnikalar" element={<Texnikalar />} />
+      <Route path="/texnikalar/:id" element={<TexnikalarSingle />} />
       <Route path="/blog" element={<BlogMenu />} />
       <Route path="/about" element={<About />} />
       <Route path="/icare" element={<Lease />} />
