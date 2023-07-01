@@ -39,7 +39,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 20,
-          textTransform: "capitalize",
+          textTransform: "none",
           color: "black",
           borderColor: "black",
           minWidth: 150,
