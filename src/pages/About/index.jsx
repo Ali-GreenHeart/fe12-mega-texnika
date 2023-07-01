@@ -3,8 +3,6 @@ import PageContainer from "../../components/PageContainer";
 import { Box, Grid, Typography } from "@mui/material";
 import PaperImg from "../../components/PaperImg";
 import about1 from "../../assets/about/about1.png";
-import forklift from "../../assets/forklift.png";
-import belas from "../../assets/belas.png";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import AboutTexnikaSection from "../../components/AboutTexnikaSection";
 
