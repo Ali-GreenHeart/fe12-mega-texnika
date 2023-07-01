@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography, Stack,TextField,Box  } from "@mui/material";
+import { Button, Container, Grid, Typography, Stack, TextField, Box } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import PaperImg from "../../components/PaperImg";
 import Traktor from "../../assets/traktor.png";
@@ -9,39 +9,39 @@ import AboutTexnikaSection from "../../components/AboutTexnikaSection";
 import TexnikaCard from "../../components/TexnikaCard";
 import MarkalarCarousel from "../../components/MarkalarCarousel";
 import HomeCard from "../../components/Homecard";
-import WhyChooseUs from  "../../components/WhyChooseUs";
+import WhyChooseUs from "../../components/WhyChooseUs";
 import img1 from "../../assets/elaqe/img1.png"
 
 const texniknews = [
   {
     id: 0,
-    img: "ekskavator.png",
+    img: eskavator,
     title: "Ekskavator",
-    text:"Lorem Ipsum is simply dummy",
-   date:"2022"
+    text: "Lorem Ipsum is simply dummy",
+    date: "2022"
   },
   {
     id: 1,
-    img: "ekskavator_yukleyici.png",
+    img: ekskavator_yukleyici,
     title: "Ekskavator yükləyici",
-    text:"Lorem Ipsum is simply dummy",
-    date:"2022"
+    text: "Lorem Ipsum is simply dummy",
+    date: "2022"
 
   },
   {
     id: 2,
-    img: "avtokran.png",
+    img: eskavator,
     title: "Avtokran",
-    text:"Lorem Ipsum is simply dummy",
-    date:"2022"
-  
+    text: "Lorem Ipsum is simply dummy",
+    date: "2022"
+
   },
   {
     id: 3,
-    img: "forklift.png",
+    img: ekskavator_yukleyici,
     title: "Forkliftlər",
-    text:"Lorem Ipsum is simply dummy",
-   date:"2022"
+    text: "Lorem Ipsum is simply dummy",
+    date: "2022"
 
   },
 ];
@@ -200,9 +200,8 @@ const Homeali = () => {
                 <HomeCard
                   title={ite.title}
                   src={ite.img}
-                 date={ite.date}
+                  date={ite.date}
                   text={ite.text}
-  
                 />
               </Grid>
             );
@@ -211,72 +210,71 @@ const Homeali = () => {
 
 
         <Box sx={{ backgroundColor: "secondary.white" }} py={4} mt={10}>
-        <Container>
-          <Grid container>
-            <Grid item xs={12} md={6}>
-              <Typography
-                variant="h5"
-                color="secondary"
-                fontFamily="Montserrat"
-                fontSize="30px"
-                fontWeight="700"
-                my={2}
-              >
-                Bizimlə əlaqə saxla!
-              </Typography>
-              <Typography
-                variant="h6"
-                fontFamily="Mulish"
-                fontSize="14px"
-              >
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled
-              </Typography>
-              <Grid my={2} container spacing={1}>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="fullName"
-                    label="Ad, Soyad"
-                  />
+          <Container>
+            <Grid container>
+              <Grid item xs={12} md={6}>
+                <Typography
+                  variant="h5"
+                  color="secondary"
+                  fontFamily="Montserrat"
+                  fontSize="30px"
+                  fontWeight="700"
+                  my={2}
+                >
+                  Bizimlə əlaqə saxla!
+                </Typography>
+                <Typography
+                  variant="h6"
+                  fontFamily="Mulish"
+                  fontSize="14px"
+                >
+                  Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industry's standard dummy
+                  text ever since the 1500s, when an unknown printer took a galley
+                  of type and scrambled
+                </Typography>
+                <Grid my={2} container spacing={1}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="fullName"
+                      label="Ad, Soyad"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="companyName"
+                      label="Şirkətin adı"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="eMail"
+                      label="E-mail"
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      name="phone"
+                      label="Telefon"
+                    />
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="companyName"
-                    label="Şirkətin adı"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="eMail"
-                    label="E-mail"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    name="phone"
-                    label="Telefon"
-                  />
-                </Grid>
+                <Button fullWidth>Göndər</Button>
               </Grid>
-              <Button fullWidth>Göndər</Button>
+              <Grid item xs={12} md={6}
+                sx={{
+                  '& > img': {
+                    display: { xs: 'none', md: 'inline' },
+                    mt: { md: '-100px', lg: "-140px" },
+                    width: '100%'
+                  }
+                }}
+              >
+                <img src={img1} alt="Traktor" />
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6}
-              sx={{
-                '& > img': {
-                  display: { xs: 'none', md: 'inline' },
-                  mt: { md: '-100px', lg: "-140px" },
-                  width: '100%'
-                }
-              }}
-            >
-              <img src={img1} alt="Traktor" />
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-     
+          </Container>
+        </Box>
 
 
 
@@ -286,7 +284,8 @@ const Homeali = () => {
 
 
 
-        <WhyChooseUs/>
+
+        <WhyChooseUs />
 
 
       </Container>
