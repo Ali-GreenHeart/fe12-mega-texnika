@@ -1,132 +1,147 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
-import ekskavator from "../../assets/ekskavator_1.png";
-import ekskavator_yukleyici from "../../assets/ekskavator_yukleyici.png";
-import eskavator from "../../assets/eskavator.png";
-import forklift from "../../assets/forklift.png";
-import belas from "../../assets/belas.png";
-import { useState } from "react";
+import TexnikaCard from "../../components/TexnikaCard";
+import TexnikalarMenu from "./texnikalarMenu";
 
-let imgList = [ekskavator, ekskavator_yukleyici, eskavator, forklift, belas];
+const texnikalar = [
+  {
+    id: 0,
+    img: "ekskavator.png",
+    title: "Ekskavator",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 1,
+    img: "ekskavator_yukleyici.png",
+    title: "Ekskavator yükləyici",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 2,
+    img: "avtokran.png",
+    title: "Avtokran",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 3,
+    img: "forklift.png",
+    title: "Forkliftlər",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 4,
+    img: "ekskavator.png",
+    title: "Ekskavator",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
 
-let obj = {
-  titleOne: "Məhsulun adı",
-  titleTwo: "Ekskavator",
-  dateOne: "2017",
-  paragraphs:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
-  textOne: "Günlük icarə:",
-  textTwo: "Aylıq icarə:",
-  azn: "1000 AZN",
-};
+  {
+    id: 5,
+    img: "ekskavator_yukleyici.png",
+    title: "Ekskavator yükləyici",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 6,
+    img: "avtokran.png",
+    title: "Avtokran",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+  {
+    id: 7,
+    img: "forklift.png",
+    title: "Forkliftlər",
+    year: 2022,
+    priceMonth: 1000,
+    priceDay: 100,
+  },
+
+];
+
+
 
 const Texnikalar = () => {
-  const [boxImg, setBoxImg] = useState(ekskavator);
-
-  const handleImage = (img) => setBoxImg(img);
-
-  return (
+  return (<>
     <PageContainer>
-      <Container className="background_radiuses_texture">
-        <Grid container alignItems="center" spacing={3}>
-          <Grid item xs={8} md={1}>
-            {imgList.map((list) => (
-              <Card key={list} sx={{ mt: 2, p: 1, cursor: "pointer" }}>
-                <CardMedia
-                  height="85"
-                  component="img"
-                  image={list}
-                  onClick={() => handleImage(list)}
+      <Container >
+        <Typography
+          mb={6}
+          fontSize="12px"
+          color="secondary.light"
+        >Ana səhifə | <b>Texnikalar</b>
+        </Typography>
+
+        <Typography
+          component="h2"
+          my={3}
+          textAlign="center"
+          fontWeight="700" fontSize="30px"
+          color="secondary"
+          sx={{ display: { xs: "none", md: "none", lg: "block" } }}
+        >Texnikalar
+        </Typography>
+        <TexnikalarMenu />
+        <Stack
+          className="btn"
+          flexDirection="row"
+          sx={{
+            minHeight: "35px",
+            textAlign: "center",
+            display: { xs: "none", lg: "block" }
+          }}
+          border="1px solid"
+          borderRadius="20px"
+        >
+          <Button variant="text">Hamısı</Button>
+          <Button variant="text">Ekskavator</Button>
+          <Button variant="text">Ekskavator yükləyici</Button>
+          <Button variant="text">Forkliftlər</Button>
+          <Button variant="text">Avtokran</Button>
+          <Button variant="text">Eskavator</Button>
+          <Button variant="text">Eskavator yükləyici</Button>
+          <Button variant="text">Forkliftlər</Button>
+          <Button variant="text">Avtokran</Button>
+        </Stack>
+        <Grid container position={"relative"}
+          my={2}
+          spacing={2}
+          justifyContent="center"
+        >
+          {
+            texnikalar.map(({ id, img, title, year, priceMonth, priceDay }) => {
+              return <Grid
+                key={id}
+                item xs={12} sm={6} md={3} lg={3}>
+
+                <TexnikaCard
+                  title={title}
+                  src={"/texnikalar_img/" + img}
+                  year={year}
+                  priceMonth={priceMonth}
+                  priceDay={priceDay}
                 />
-              </Card>
-            ))}
-          </Grid>
-          <Grid item xs={8} md={5}>
-            <Card>
-              <CardMedia height="350" component="img" image={boxImg} />
-            </Card>
-          </Grid>
-          <Grid item xs={8} md={6}>
-            <Card sx={{ p: 2 }}>
-              <Box
-                display={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <CardContent>
-                  <Typography variant="h5" color="#596C74">
-                    {obj.titleOne}
-                  </Typography>
-                  <Typography variant="h6" color="#686868">
-                    {obj.titleTwo}
-                  </Typography>
-                </CardContent>
-                <CardContent>
-                  <Typography sx={{ fontSize: 16 }} color="#B0ADAD">
-                    {obj.dateOne}
-                  </Typography>
-                </CardContent>
-              </Box>
-              <Box>
-                <CardContent>
-                  <Typography color="#69768B">{obj.paragraphs}</Typography>
-                </CardContent>
-              </Box>
-              <Box
-                display={{ display: "flex", justifyContent: "space-between" }}
-              >
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 18 }}
-                    fontWeight="bold"
-                    color="#596C74"
-                  >
-                    {obj.textOne}
-                  </Typography>
-                  <Typography
-                    sx={{ fontSize: 18 }}
-                    fontWeight="bold"
-                    color="#686868"
-                  >
-                    {obj.textTwo}
-                  </Typography>
-                </CardContent>
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 18 }}
-                    fontWeight="bold"
-                    color="#FFC01F"
-                  >
-                    {obj.azn}
-                  </Typography>
-                  <Typography
-                    sx={{ fontSize: 18 }}
-                    fontWeight="bold"
-                    color="#FFC01F"
-                  >
-                    {obj.azn}
-                  </Typography>
-                </CardContent>
-              </Box>
-              <Box>
-                <CardActions>
-                  <Button fullWidth> Günlük icarə et</Button>
-                </CardActions>
-              </Box>
-            </Card>
-          </Grid>
+              </Grid>
+            })
+          }
         </Grid>
       </Container>
     </PageContainer>
-  );
-};
+  </>)
+}
+
+
 export default Texnikalar;

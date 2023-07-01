@@ -1,1 +1,3 @@
 1. navlink texnikalar href is not working!
+2. Texnikalar: a. pagination b. tags aren't working
+3. 

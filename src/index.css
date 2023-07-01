@@ -36,3 +36,7 @@ a {
   z-index: -1;
   background-image: url("assets/elipse.png");
 }
+
+.btn Button {
+    min-width: 110px;
+}
