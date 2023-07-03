@@ -10,7 +10,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import axios from "axios";
 import LeaseLoading from "../LeaseLoading";
 
 const LeaseModal = () => {
