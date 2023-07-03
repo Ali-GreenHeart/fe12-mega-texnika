@@ -11,6 +11,7 @@ import {
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import LeaseLoading from "../LeaseLoading";
+import LeaseModalError from "../LeaseModalError";
 
 const LeaseModal = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -75,8 +76,8 @@ const LeaseModal = () => {
               </Button>
             </Container>
           )}
-          {step === 1 && <LeaseLoading />}
-          {step === 2 && <p>success</p>}
+          {step === 1 && <LeaseLoading setStep={setStep} />}
+          {step === 2 && <LeaseModalError />}
 
           {step === 3 && <p>error</p>}
         </DialogContent>
