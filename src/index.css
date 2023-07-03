@@ -71,13 +71,13 @@ a {
   }
 }
 
-.firstTitle{
+.firstTitle {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  font-family: 'Times New Roman', Times, serif;
-  color: #596C72;;
-  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+  color: #596c72;
+  font-weight: bolder;
   padding-top: 20px;
 }
 
@@ -86,11 +86,15 @@ a {
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  color: #69768B;
+  color: #69768b;
   font-weight: 400;
   padding-top: 20px;
 }
 
-.error_img{
-  width: 500px;
+.error_img {
+  width: 100px;
+}
+
+.error {
+  margin: auto !important;
 }
