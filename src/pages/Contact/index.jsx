@@ -1,22 +1,18 @@
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import {
   Box,
   Button,
   Card,
-  CardActions,
   CardContent,
-  CardMedia,
   Container,
   Grid,
-  Paper,
-  Stack,
-  TextField,
-  Typography,
   IconButton,
+  TextField,
+  Typography
 } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 
 function Contact() {
   return (
