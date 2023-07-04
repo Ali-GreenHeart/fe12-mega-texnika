@@ -20,6 +20,7 @@ import forklift from "../../assets/forklift.png";
 import belas from "../../assets/belas.png";
 import { useState } from "react";
 import LeaseModal from "../../components/LeaseModal";
+import { Link } from "react-router-dom";
 
 let imgList = [ekskavator, ekskavator_yukleyici, eskavator, forklift, belas];
 
@@ -123,6 +124,14 @@ const TexnikalarSingle = () => {
                 <LeaseModal />
               </CardActions>
             </Card>
+          </Grid>
+        </Grid>
+        <Grid mt={6} container justifyContent="flex-end">
+          <Grid textAlign="center" item xs={4}>
+            pagination
+          </Grid>
+          <Grid item xs={4} textAlign="right">
+            <Link to="/texnikalar">Bütün məhsullar</Link>
           </Grid>
         </Grid>
       </Container>
