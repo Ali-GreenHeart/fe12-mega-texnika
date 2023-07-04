@@ -11,12 +11,6 @@ const Xeber = () => {
         <>
             <PageContainer>
                 <Container>
-                    <Typography
-                        mb={6}
-                        fontSize="12px"
-                        color="secondary.light"
-                    >Ana səhifə | <b>Blog | Xəbərin adı</b>
-                    </Typography>
                     <Grid container alignItems="center" spacing={2}>
                         <Grid item xs={12} md={6}>
                             <Typography component="h2" fontWeight="700" fontSize="35px" color="secondary">Xəbərin adı</Typography>

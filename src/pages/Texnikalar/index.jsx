@@ -91,13 +91,6 @@ const Texnikalar = () => {
       <PageContainer>
         <Container >
           <Typography
-            mb={6}
-            fontSize="12px"
-            color="secondary.light"
-          >Ana səhifə | <b>Texnikalar</b>
-          </Typography>
-
-          <Typography
             component="h2"
             my={3}
             textAlign="center"
