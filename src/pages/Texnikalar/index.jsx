@@ -2,72 +2,81 @@ import { Button, Container, Grid, Stack, Typography } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import TexnikaCard from "../../components/TexnikaCard";
 import TexnikalarMenu from "./texnikalarMenu";
+import { useState } from "react";
 
 const texnikalar = [
   {
     id: 0,
     img: "ekskavator.png",
-    title: "Ekskavator",
+    title: " 0Ekskavator",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 0,
   },
   {
     id: 1,
     img: "ekskavator_yukleyici.png",
-    title: "Ekskavator yükləyici",
+    title: " 1Ekskavator yükləyici",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 1,
   },
   {
     id: 2,
     img: "avtokran.png",
-    title: "Avtokran",
+    title: " 1Avtokran",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 1,
   },
   {
     id: 3,
     img: "forklift.png",
-    title: "Forkliftlər",
+    title: " 2Forkliftlər",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 2,
   },
   {
     id: 4,
     img: "ekskavator.png",
-    title: "Ekskavator",
+    title: " 3Ekskavator",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 3,
   },
 
   {
     id: 5,
     img: "ekskavator_yukleyici.png",
-    title: "Ekskavator yükləyici",
+    title: " 3Ekskavator yükləyici",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 3,
   },
   {
     id: 6,
     img: "avtokran.png",
-    title: "Avtokran",
+    title: " 4Avtokran",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 2,
   },
   {
     id: 7,
     img: "forklift.png",
-    title: "Forkliftlər",
+    title: " 4Forkliftlər",
     year: 2022,
     priceMonth: 1000,
     priceDay: 100,
+    category: 1,
   },
 
 ];
@@ -75,73 +84,65 @@ const texnikalar = [
 
 
 const Texnikalar = () => {
-  return (<>
-    <PageContainer>
-      <Container >
-        <Typography
-          mb={6}
-          fontSize="12px"
-          color="secondary.light"
-        >Ana səhifə | <b>Texnikalar</b>
-        </Typography>
+  const [category, setCategory] = useState(-1)  // -1 all, 0 eskavator, 1 -esk yuk , 2 - forklift 3 avtok 4 esk
 
-        <Typography
-          component="h2"
-          my={3}
-          textAlign="center"
-          fontWeight="700" fontSize="30px"
-          color="secondary"
-          sx={{ display: { xs: "none", md: "none", lg: "block" } }}
-        >Texnikalar
-        </Typography>
-        <TexnikalarMenu />
-        <Stack
-          className="btn"
-          flexDirection="row"
-          sx={{
-            minHeight: "35px",
-            textAlign: "center",
-            display: { xs: "none", lg: "block" }
-          }}
-          border="1px solid"
-          borderRadius="20px"
-        >
-          <Button variant="text">Hamısı</Button>
-          <Button variant="text">Ekskavator</Button>
-          <Button variant="text">Ekskavator yükləyici</Button>
-          <Button variant="text">Forkliftlər</Button>
-          <Button variant="text">Avtokran</Button>
-          <Button variant="text">Eskavator</Button>
-          <Button variant="text">Eskavator yükləyici</Button>
-          <Button variant="text">Forkliftlər</Button>
-          <Button variant="text">Avtokran</Button>
-        </Stack>
-        <Grid container position={"relative"}
-          my={2}
-          spacing={2}
-          justifyContent="center"
-        >
-          {
-            texnikalar.map(({ id, img, title, year, priceMonth, priceDay }) => {
-              return <Grid
-                key={id}
-                item xs={12} sm={6} md={3} lg={3}>
+  return (
+    <>
+      <PageContainer>
+        <Container >
+          <Typography
+            component="h2"
+            my={3}
+            textAlign="center"
+            fontWeight="700" fontSize="30px"
+            color="secondary"
+            sx={{ display: { xs: "none", md: "none", lg: "block" } }}
+          >Texnikalar
+          </Typography>
+          <TexnikalarMenu setCategory={setCategory} />
+          <Stack
+            className="btn"
+            flexDirection="row"
+            sx={{
+              minHeight: "35px",
+              textAlign: "center",
+              display: { xs: "none", lg: "block" }
+            }}
+            border="1px solid"
+            borderRadius="20px"
+          >
+            <Button onClick={() => setCategory(-1)} variant="text">Hamısı</Button>
+            <Button onClick={() => setCategory(0)} variant="text">Ekskavator</Button>
+            <Button onClick={() => setCategory(1)} variant="text">Ekskavator yükləyici</Button>
+            <Button onClick={() => setCategory(2)} variant="text">Forkliftlər</Button>
+            <Button onClick={() => setCategory(3)} variant="text">Avtokran</Button>
+          </Stack>
+          <Grid container position={"relative"}
+            my={2}
+            spacing={2}
+            justifyContent="center"
+          >
+            {
+              texnikalar.filter((texnika) => category === -1 || texnika.category === category).map(({ id, img, title, year, priceMonth, priceDay }) => {
+                return <Grid
+                  key={id}
+                  item xs={12} sm={6} md={3} lg={3}>
 
-                <TexnikaCard
-                  id={id}
-                  title={title}
-                  src={"/texnikalar_img/" + img}
-                  year={year}
-                  priceMonth={priceMonth}
-                  priceDay={priceDay}
-                />
-              </Grid>
-            })
-          }
-        </Grid>
-      </Container>
-    </PageContainer>
-  </>)
+                  <TexnikaCard
+                    id={id}
+                    title={title}
+                    src={"/texnikalar_img/" + img}
+                    year={year}
+                    priceMonth={priceMonth}
+                    priceDay={priceDay}
+                  />
+                </Grid>
+              })
+            }
+          </Grid>
+        </Container>
+      </PageContainer>
+    </>)
 }
 
 

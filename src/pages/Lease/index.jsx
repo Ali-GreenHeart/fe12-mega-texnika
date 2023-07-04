@@ -52,38 +52,6 @@ export const Lease = () => {
   return (
     <PageContainer>
       <Container>
-        <Grid container>
-          <Grid
-            item
-            alignItems="flex-start"
-            display="flex"
-            flexDirection="row"
-            gap={1}
-          >
-            <Typography
-              variant="h6"
-              fontStyle="Mulish"
-              color="rgba(173, 173, 173, 1)"
-            >
-              Ana səhifə
-            </Typography>
-            <Typography
-              variant="h6"
-              color="rgba(104, 104, 104, 1)"
-              fontFamily="Mulish"
-            >
-              |
-            </Typography>
-            <Typography
-              variant="h6"
-              color="rgba(89, 108, 114, 1)"
-              fontFamily="Mulish"
-              fontStyle="50px"
-            >
-              İcarə şərtləri
-            </Typography>
-          </Grid>
-        </Grid>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
           <Grid container>
             <Grid
