@@ -19,124 +19,66 @@ function Contact() {
     <PageContainer>
       <Container className="background_elipse_texture">
         <Grid container alignItems="center" spacing={2}>
-          <Grid item xs={8} md={6}>
-            <Box sx={{ p: 2 }}>
-              <Box sx={{ mb: 6 }}>
-                <Box>
-                  <Typography variant="h4">Bizə yazın!</Typography>
-                </Box>
-              </Box>
-              <Box
-                display={{ display: "flex", justifyContent: "space-between" }}
-                sx={{ mb: 2 }}
-              >
-                <Box>
-                  <TextField label="Ad, Soyad*" variant="outlined" />
-                </Box>
-                <Box>
-                  <TextField label="E-mail*" variant="outlined" />
-                </Box>
-              </Box>
-              <Box
-                display={{ display: "flex", justifyContent: "space-between" }}
-                sx={{ mb: 2 }}
-              >
-                <Box>
-                  <TextField label="Şirkətin adı" variant="outlined" />
-                </Box>
-                <Box>
-                  <TextField label="Telefon*ad" variant="outlined" />
-                </Box>
-              </Box>
-              <Box
-                display={{ display: "flex", justifyContent: "space-between" }}
-                sx={{ mb: 2 }}
-              >
+          <Grid item xs={12} md={6}>
+            <Typography mb={5} variant="h4">Bizə yazın!</Typography>
+            <Grid
+              container
+              spacing={1}
+            >
+              <Grid item xs={12} sm={6}>
+                <TextField label="Ad, Soyad*" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField label="E-mail*" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField label="Şirkətin adı" variant="outlined" />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField label="Telefon*" variant="outlined" />
+              </Grid>
+              <Grid item xs={12}>
                 <TextField
-                  fullWidth
                   multiline
                   rows={6}
-                  maxRows={6}
                   label="Mesaj*"
-                  id="fullWidth"
                 />
-              </Box>
-              <Box sx={{ mt: 4 }}>
-                <Box>
-                  <Button fullWidth sx={{ pt: 2, pb: 2 }}>
-                    Göndər
-                  </Button>
-                </Box>
-              </Box>
-            </Box>
+              </Grid>
+            </Grid>
+            <Button fullWidth sx={{ mt: 2 }}>
+              Göndər
+            </Button>
           </Grid>
-          <Grid item xs={8} md={5}>
+          <Grid item xs={12} md={6}>
+
             <Card sx={{ p: 2 }}>
-              <Box display="flex" justifyContent="center">
-                <CardContent>
-                  <Typography color="#596C72" variant="h4">
-                    Əlaqə
-                  </Typography>
-                </CardContent>
-              </Box>
-              <Box>
-                <Box display="flex" justifyContent="center">
-                  <CardContent>
-                    <Typography>
-                      Fətəli Xan Xoyski 111A, Bakı Azərbaycan
-                    </Typography>
-                  </CardContent>
-                </Box>
-                <Grid
-                  container
-                  display="flex"
-                  justifyContent={"center"}
-                  flexDirection={"row"}
-                >
-                  <Grid item>
-                    <CardContent>
-                      <Typography>+994(51) 123 45 67</Typography>
-                    </CardContent>
-                    <CardContent>
-                      <Typography>info@megatexnika.az</Typography>
-                    </CardContent>
-                  </Grid>
-                  <Grid item>
-                    <CardContent>
-                      <Typography>+994(12) 123 45 67</Typography>
-                    </CardContent>
-                  </Grid>
-                </Grid>
-                <Box display="flex" justifyContent="center">
-                  <CardContent>
-                    <Typography>
-                      Qrafik (iş saatlarımız): B.e - Ş. 10:00 - 19:00
-                    </Typography>
-                  </CardContent>
-                </Box>
-                <Grid container display={"flex"} justifyContent={"center"}>
-                  <Grid item>
-                    <IconButton>
-                      <InstagramIcon />
-                    </IconButton>
-                  </Grid>
-                  <Grid item>
-                    <IconButton>
-                      <FacebookIcon />
-                    </IconButton>
-                  </Grid>
-                  <Grid item>
-                    <IconButton>
-                      <TwitterIcon />
-                    </IconButton>
-                  </Grid>
-                </Grid>
-              </Box>
+              <CardContent>
+                <Typography textAlign="center" color="#596C72" variant="h4">
+                  Əlaqə
+                </Typography>
+              </CardContent>
+              <CardContent>
+                <Typography mb={2}>
+                  Fətəli Xan Xoyski 111A, Bakı Azərbaycan
+                </Typography>
+                <Typography mb={2}>+994(51) 123 45 67    +994(12) 123 45 67</Typography>
+                <Typography mb={2}>info@megatexnika.az</Typography>
+                <Typography mb={2}>Qrafik (iş saatlarımız): B.e - Ş. 10:00 - 19:00</Typography>
+                <IconButton>
+                  <InstagramIcon sx={{ color: "black" }} />
+                </IconButton>
+                <IconButton>
+                  <FacebookIcon sx={{ color: "black" }} />
+                </IconButton>
+                <IconButton>
+                  <TwitterIcon sx={{ color: "black" }} />
+                </IconButton>
+              </CardContent>
             </Card>
-          </Grid>
-        </Grid>
-      </Container>
-    </PageContainer>
+          </Grid >
+        </Grid >
+      </Container >
+    </PageContainer >
   );
 }
 
