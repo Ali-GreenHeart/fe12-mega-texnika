@@ -1,6 +1,5 @@
 1. navlink texnikalar href is not working!
 2.  Texnikalar: a. pagination b. tags aren't working
-3. TexnikalarSingle: a. oxsar texnikalar yoxdur  b. pagination  c. butun mehsullar (/texnikalar)
+3. TexnikalarSingle: a. oxsar texnikalar yoxdur  b. pagination 
 4. [breadcrumb (PageContainer-e elave et)]
-5. [samir]  contact yoxdur. 
 6. blog: a. pagination yoxdur 
