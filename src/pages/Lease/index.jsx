@@ -92,11 +92,7 @@ export const Lease = () => {
               justifyContent="space-between"
               spacing={5}
             >
-              <Grid
-                item
-                md={6}
-                lg={4}
-              >
+              <Grid item md={6} lg={4}>
                 <Typography
                   variant="h5"
                   color="rgba(89, 108, 114, 1)"
@@ -112,10 +108,7 @@ export const Lease = () => {
               </Grid>
               <Grid item xs={12} md={6} lg={8}>
                 <PaperImg src={surunen} />
-                <Typography
-                  my={2}
-                  mt="50px"
-                >
+                <Typography my={2} mt="50px">
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -153,10 +146,10 @@ export const Lease = () => {
           >
             Tez-tez verilən suallar
           </Typography>
-          <Box gap={2}>
+          <Box gap={2} mb={8}>
             {questions.map((question) => {
               return (
-                <Accordion key={question.id}>
+                <Accordion key={question.id} >
                   <AccordionSummary expandIcon={<AddIcon color="primary" />}>
                     <Typography>{question.question}</Typography>
                   </AccordionSummary>
