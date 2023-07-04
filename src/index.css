@@ -92,10 +92,8 @@ a {
   padding-top: 10px;
 }
 
-.error_img {
-  width: 100px;
-}
-
 .error {
-  margin: auto !important;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
 }
