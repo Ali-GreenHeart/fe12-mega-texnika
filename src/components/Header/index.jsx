@@ -48,7 +48,7 @@ const Header = () => {
             <NavLink to="/texnikalar" title="Texnikalar" links={texnikalarLinks} />
             <NavLink to="/icare" title="İcarə şərtləri" />
             <NavLink to="/blog" title="Blog" />
-            <NavLink to="/elaqe" title="Əlaqə" />
+            <NavLink to="/contact" title="Əlaqə" />
             <NavLink to="/newhome" />
           </Stack>
           <Stack sx={{ display: { xs: 'none', md: 'flex' } }} flexDirection="row" gap={1}>
