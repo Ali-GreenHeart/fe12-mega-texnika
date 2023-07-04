@@ -7,6 +7,7 @@ import Xeber from "../pages/Xeber"
 import Texnikalar from "../pages/Texnikalar"
 import Homeali from "../pages/NEwhome"
 import TexnikalarSingle from "../pages/TexnikalarSingle"
+import Contact from "../pages/Contact"
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
       <Route path="/blog" element={<BlogMenu />} />
       <Route path="/about" element={<About />} />
       <Route path="/icare" element={<Lease />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/blog/:id" element={<Xeber />} />
     </Routes>
   )
