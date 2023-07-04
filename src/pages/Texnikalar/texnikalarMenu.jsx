@@ -2,14 +2,20 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Box, Button, IconButton, Menu, Stack, Typography } from '@mui/material';
 import { useState } from 'react';
 
-const TexnikalarMenu = () => {
+const TexnikalarMenu = ({ setCategory }) => {
   const [open, setOpen] = useState(false)
   const [anchorElm, setAnchorElm] = useState(null);
+
+  const handleClick = (categoryId) => {
+    setCategory(categoryId)
+    setOpen(false)
+  }
+
   return (
     <Box
       sx={{ display: { xs: 'block', lg: "none" } }}>
       <IconButton onClick={(e) => {
-        setOpen(!open)
+        setOpen(true)
         setAnchorElm(e.target)
       }}>
         <MenuIcon />
@@ -28,15 +34,11 @@ const TexnikalarMenu = () => {
         onClose={() => setOpen(false)}
       >
         <Stack sx={{ width: 250, gap: "6px" }} >
-          <Button variant='text'>Hamısı</Button>
-          <Button variant='text'>Ekskavator</Button>
-          <Button variant='text'>Ekskavator yükləyici</Button>
-          <Button variant='text'>Forkliftlər</Button>
-          <Button variant='text'>Avtokran</Button>
-          <Button variant='text'>Eskavator</Button>
-          <Button variant='text'>Eskavator yükləyici</Button>
-          <Button variant='text'>Forkliftlər</Button>
-          <Button variant='text'>Avtokran</Button>
+          <Button onClick={() => handleClick(-1)} variant='text'>Hamısı</Button>
+          <Button onClick={() => handleClick(0)} variant='text'>Ekskavator</Button>
+          <Button onClick={() => handleClick(1)} variant='text'>Ekskavator yükləyici</Button>
+          <Button onClick={() => handleClick(2)} variant='text'>Forkliftlər</Button>
+          <Button onClick={() => handleClick(3)} variant='text'>Avtokran</Button>
         </Stack>
       </Menu>
     </Box>
