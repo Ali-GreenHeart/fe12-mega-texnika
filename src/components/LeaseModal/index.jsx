@@ -1,8 +1,10 @@
 import { Dialog, Button, DialogTitle, IconButton, DialogContent, Typography, TextField, Container } from "@mui/material"
 import { useState } from "react"
 import CloseIcon from '@mui/icons-material/Close';
-import axios from "axios";
 import LeaseLoading from "../LeaseLoading";
+import LeaseSuccses from "../LeaseSucsses";
+import LeaseError from "../../LeaseError";
+
 
 const LeaseModal = () => {
     const [modalOpen, setModalOpen] = useState(false)
@@ -10,15 +12,8 @@ const LeaseModal = () => {
 
 
     const handleLease = () => {
-        setStep(1)
+        setStep(3)
 
-        // axios.get("https://jsonplaceholder.typicode.com/users")
-        //     .then(({ data }) => {
-        //         setStep(2)
-        //     })
-        //     .catch(() => {
-        //         setStep(3)
-        //     })
     }
 
     return (
@@ -63,13 +58,13 @@ const LeaseModal = () => {
                     }
                     {
                         step === 2 && (
-                            <p>success</p>
+                          <LeaseSuccses/>
                         )
                     }
 
                     {
                         step === 3 && (
-                            <p>error</p>
+                          <LeaseError/>
                         )
                     }
 
