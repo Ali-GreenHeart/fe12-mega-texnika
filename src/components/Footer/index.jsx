@@ -25,7 +25,7 @@ const Footer = () => {
             <Typography>+994(12) 123 45 67</Typography>
             <Typography>info@lmegatexnika.az</Typography>
           </Grid>
-          <Grid my={1} item xs={12} sm={6} md={3}>
+          <Grid my={1} item xs={12} sm={6} md={4}>
             <Typography>
               Qrafik (iş saatlarımız): B.e - Ş. 10:00 - 19:00
             </Typography>
