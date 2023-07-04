@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import PaperImg from "../PaperImg";
 import error from "../../assets/LeaseModalError/error.png";
-import Texnikalar from "../../pages/Texnikalar";
 
 let obj = {
   title: "Sifarişiniz tamamlanmadı",
@@ -20,7 +19,7 @@ const LeaseModalError = () => {
         sx={{ p: 2, width: 170 }}
         style={{ margin: "0 auto" }}
       >
-        <PaperImg src={error} className="error" />
+        <img src={error} className="error" />
       </Grid>
       <Typography
         variant="h4"
