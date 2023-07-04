@@ -1,5 +1,4 @@
 import { Box, Grid, Typography } from "@mui/material";
-import PaperImg from "../PaperImg";
 import error from "../../assets/LeaseModalError/error.png";
 
 let obj = {
