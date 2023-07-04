@@ -8,39 +8,22 @@ let obj = {
 
 const LeaseModalError = () => {
   return (
-    <Box sx={{ p: 2 }}>
-      <Grid
-        xs={12}
-        sm={6}
-        md={2}
-        item
+    <>
+      <Box
         className="error_img"
-        sx={{ p: 2, width: 170 }}
+        sx={{ p: 2 }}
         style={{ margin: "0 auto" }}
       >
         <img src={error} className="error" />
-      </Grid>
-      <Typography
-        variant="h4"
-        className="firstTitle"
-        p={2}
-        xs={12}
-        sm={6}
-        md={3}
-      >
-        {obj.title}
-      </Typography>
-      <Typography
-        variant="h6"
-        className="secontTitle"
-        p={2}
-        xs={12}
-        sm={6}
-        md={3}
-      >
-        {obj.text}
-      </Typography>
-    </Box>
+        <Typography variant="h4" className="firstTitle" p={2}  textAlign="center">
+          {obj.title}
+        </Typography>
+        <Typography variant="h6" className="secontTitle" p={2} textAlign="center">
+          {obj.text}
+        </Typography>
+      </Box>
+    </>
   );
 };
+
 export default LeaseModalError;
