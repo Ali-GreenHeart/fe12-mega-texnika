@@ -4,7 +4,7 @@ import TexnikaCard from "../../components/TexnikaCard";
 import TexnikalarMenu from "./texnikalarMenu";
 import { useState } from "react";
 
-const texnikalar = [
+export const texnikalar = [
   {
     id: 0,
     img: "ekskavator.png",

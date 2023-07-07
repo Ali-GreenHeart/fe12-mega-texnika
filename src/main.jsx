@@ -5,6 +5,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import theme from "./theme.js";
+import ScrollToTop from "./components/ScrollToTop/index.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <>

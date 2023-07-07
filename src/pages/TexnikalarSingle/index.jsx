@@ -22,6 +22,8 @@ import belas from "../../assets/belas.png";
 import { useState } from "react";
 import LeaseModal from "../../components/LeaseModal";
 import { Link } from "react-router-dom";
+import TexnikaCard from "../../components/TexnikaCard";
+import { texnikalar } from "../Texnikalar";
 
 let imgList = [ekskavator, ekskavator_yukleyici, eskavator, forklift, belas];
 
@@ -38,6 +40,7 @@ let obj = {
 
 const TexnikalarSingle = () => {
   const [boxImg, setBoxImg] = useState(imgList[0]);
+  const [page, setPage] = useState(1)
 
   return (
     <PageContainer>
@@ -127,18 +130,43 @@ const TexnikalarSingle = () => {
             </Card>
           </Grid>
         </Grid>
+        <Typography my={6} variant="h6" fontWeight="bold">
+          Oxsar Texnikalar
+        </Typography>
+        <Grid container spacing={4}>
+          {
+            texnikalar
+              .slice((page - 1) * 4, (page - 1) * 4 + 4)
+              .map(({ priceDay, priceMonth, id, category, img, title, year }) => {
+                return (
+                  <Grid key={id} item xs={12} sm={6} md={4} lg={3}>
+                    <TexnikaCard
+                      priceDay={priceDay}
+                      priceMonth={priceMonth}
+                      src={"/texnikalar_img/" + img}
+                      title={title}
+                      year={year}
+                    />
+                  </Grid>
+                )
+              })
+          }
+        </Grid>
         <Grid mt={6} container justifyContent="flex-end">
-          <Grid textAlign="center" item xs={4}>
-            pagination
+          <Grid
+            sx={{
+              '& ul': {
+                justifyContent: 'center'
+              }
+            }}
+            textAlign="center" item xs={4}>
+            <Pagination onChange={(e, value) => setPage(value)} count={2} color="primary" />
           </Grid>
           <Grid item xs={4} textAlign="right">
             <Link to="/texnikalar">Bütün məhsullar</Link>
           </Grid>
         </Grid>
       </Container>
-      <Stack alignItems="center">
-        <Pagination onChange={(e, value) => console.log(value)} count={2} color="primary" />
-      </Stack>
     </PageContainer>
   );
 };
