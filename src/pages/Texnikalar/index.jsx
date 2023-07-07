@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Button, Container, Grid, Pagination, Stack, Typography } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import TexnikaCard from "../../components/TexnikaCard";
 import TexnikalarMenu from "./texnikalarMenu";
@@ -141,6 +141,9 @@ const Texnikalar = () => {
             }
           </Grid>
         </Container>
+        <Stack alignItems="center">
+          <Pagination onChange={(e, value) => console.log(value)} count={5} color="primary" />
+        </Stack>
       </PageContainer>
     </>)
 }

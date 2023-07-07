@@ -8,6 +8,7 @@ import {
   Container,
   Dialog,
   Grid,
+  Pagination,
   Paper,
   Stack,
   Typography,
@@ -135,6 +136,9 @@ const TexnikalarSingle = () => {
           </Grid>
         </Grid>
       </Container>
+      <Stack alignItems="center">
+        <Pagination onChange={(e, value) => console.log(value)} count={2} color="primary" />
+      </Stack>
     </PageContainer>
   );
 };
