@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Pagination, Paper, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Pagination, PaginationItem, Paper, Stack, Typography } from "@mui/material";
 import PageContainer from "../../components/PageContainer";
 import Traktor from "../../assets/traktor.png";
 import news1 from "../../assets/news1.png"
@@ -8,6 +8,7 @@ import CategoryCard from "../CategoryCard";
 import PaperImg from "../PaperImg";
 import BlogCard from "../BlogCard";
 import { useState } from "react";
+import { Home, TramSharp } from "@mui/icons-material";
 
 
 const news = [
@@ -197,7 +198,14 @@ const Blog = () => {
           }
         </Grid>
         <Stack alignItems="center">
-          <Pagination onChange={(e, value) => setPage(value)} count={5} color="primary" />
+          <Pagination
+            page={page}
+            renderItem={(item) => (
+              <PaginationItem
+                {...item}
+              />
+            )}
+            onChange={(e, value) => setPage(value)} count={5} color="primary" />
         </Stack>
       </Container>
     </PageContainer>
