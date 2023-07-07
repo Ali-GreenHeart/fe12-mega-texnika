@@ -26,7 +26,6 @@ const NavLink = ({ to, title, links }) => {
         }}
       >
         {title}
-
         {Array.isArray(links) && (
           <ExpandMoreIcon
             sx={{
@@ -44,14 +43,21 @@ const NavLink = ({ to, title, links }) => {
           >
             {links.map((link) => {
               return (
-                <MenuItem key={link.id} onClick={() => navigate(link.to)}>
+                <MenuItem
+                  onMouseLeave={() => {
+                    setHover(false)
+                  }}
+                  onMouseEnter={() => {
+                    setHover(true)
+                  }}
+                  key={link.id} onClick={() => navigate(link.to)}>
                   {link.title}
                 </MenuItem>
               );
             })}
           </Menu>
         )}
-      </RRD_NavLink>
+      </RRD_NavLink >
     </>
   );
 };

@@ -117,7 +117,7 @@ const Texnikalar = () => {
             <Button onClick={() => setCategory(2)} variant="text">Forkliftlər</Button>
             <Button onClick={() => setCategory(3)} variant="text">Avtokran</Button>
           </Stack>
-          <Grid container position={"relative"}
+          <Grid container
             my={2}
             spacing={2}
             justifyContent="center"
@@ -127,7 +127,6 @@ const Texnikalar = () => {
                 return <Grid
                   key={id}
                   item xs={12} sm={6} md={3} lg={3}>
-
                   <TexnikaCard
                     id={id}
                     title={title}
