@@ -1,4 +1,4 @@
-import { Close } from "@mui/icons-material"
+import { Close, Edit } from "@mui/icons-material"
 import { Box, Button, Grid, IconButton, Paper, Typography } from "@mui/material"
 import axios from "axios"
 import { useState } from "react"
@@ -38,6 +38,20 @@ const TestPage = ({ }) => {
             .catch(() => alert('silinmedi!'))
     }
 
+    const handleEditCard = (post) => {
+        const title = prompt('enter  new title', post.title)
+        const author = prompt('enter new  author', post.author)
+        const imgSrc = prompt('enter new  imgSrc', post.imgSrc)
+        if (title && author && imgSrc) {
+            const newPost = { title, author, imgSrc }
+            axios.put(url + post.id, newPost)
+                .then(() => handleGetCards())
+                .catch(() => alert('error on put'))
+        } else {
+            alert('duz yaz!')
+        }
+    }
+
     return (
         <Box p={2}>
             <h1>Welcome Test Page</h1>
@@ -49,6 +63,9 @@ const TestPage = ({ }) => {
                             <Paper elevation={10} sx={{ p: 2, m: 2 }}>
                                 <IconButton onClick={() => handleDeleteCard(post.id)} color="error" sx={{ float: 'right' }}>
                                     <Close />
+                                </IconButton>
+                                <IconButton onClick={() => handleEditCard(post)} color="error" sx={{ float: 'right' }}>
+                                    <Edit />
                                 </IconButton>
                                 <img src={post.imgSrc} alt="" style={{ width: "100%" }} />
                                 <Typography textAlign="center" variant="h4" >{post.title}</Typography>
