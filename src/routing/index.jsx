@@ -9,6 +9,7 @@ import Homeali from "../pages/NEwhome"
 import TexnikalarSingle from "../pages/TexnikalarSingle"
 import Contact from "../pages/Contact"
 import ScrollToTop from "../components/ScrollToTop"
+import TestPage from "../pages/Test"
 
 const Routing = () => {
   return (
@@ -23,6 +24,7 @@ const Routing = () => {
         <Route path="/icare" element={<Lease />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:id" element={<Xeber />} />
+        <Route path="/test" element={<TestPage />} />
       </Routes>
       <ScrollToTop />
     </>
